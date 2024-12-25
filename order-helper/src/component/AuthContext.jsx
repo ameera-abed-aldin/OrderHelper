@@ -6,14 +6,14 @@ export function useAuth(){
 
 export function AuthContext(props){
     const [userLoggedDetails,setUserLoggedDetails]=useState(null);
-    const [accessToken,setAccessToken] =useState(null);
+    const [accessToken,setAccessToken] =useState(()=>localStorage.getItem('accessToken'));
     const [isLoggedIn,setIsLoggedIn] = useState(false);
-    const value={login,logout,isLoggedIn,userLoggedDetails};
+    const value={login,logout,isLoggedIn,userLoggedDetails,accessToken};
 
     function login(tokin,data){
         setAccessToken(tokin);
         setIsLoggedIn(true);
-        localStorage.setItem('accessToken',accessToken);
+        localStorage.setItem('accessToken',tokin);
         setUserLoggedDetails(data);
     }
 

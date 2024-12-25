@@ -3,6 +3,7 @@ import { useFormik } from "formik";
 import * as Yup from "yup";
 import axios from "axios";
 import { useState } from "react";
+import{useNavigate} from "react-router";
 import { useAuth } from "./AuthContext";
 const SignupSchema = Yup.object().shape({
   password: Yup.string()
@@ -15,6 +16,7 @@ export default function Login() {
   const { login } = useAuth();
   const [error, setError] = useState(null);
   const [successMessage, setSuccessMessage] = useState(null);
+  const nevigate=useNavigate();
   const formik = useFormik({
     initialValues: {
       password: "",
@@ -28,6 +30,7 @@ export default function Login() {
         .then((res) => {
           login(res.data.accessToken, res.data);
           setSuccessMessage("Logged in successfully!");
+          nevigate("/home");
         })
         .catch((error) => console.log(error));
     },
