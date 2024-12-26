@@ -10,7 +10,7 @@ export function AuthLayout(){
             </section>
             
             <section className="col-md-6 p-5">
-            <h2 className="mb-4">Order Help</h2>
+            <h2 className="mb-4">Order Helper</h2>
             
             <Outlet/>
             </section>

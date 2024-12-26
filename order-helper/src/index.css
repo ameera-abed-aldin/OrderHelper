@@ -13,12 +13,37 @@
     max-width:700px;
     background-color: white;
     width:100%;
-    height: 80vh;
-    margin-top: 10px;
+    min-height: 80vh;   
+    border:none;
 }
 .left{
+    min-height:100px ;
     background-image: url("./assets/left3.jpg");
-    background-size: cover;
+    background-size:cover;
     background-position: center;
     overflow: hidden;
 }
+@media (max-width: 768px) { /* Tablet and smaller screens */  
+    .left {  
+        background-image: url('./assets/left5.jpg'); 
+        
+    }  
+}
+@media (max-width: 600px) { /* Tablet and smaller screens */  
+    .Custum-container {  
+      height: 100vh;
+    }  
+}
+.btn-purple {  
+    background-color: #381763;  
+    color: white; /* Optional */  
+    border: none;
+}  
+
+.btn-purple:hover {  
+    background-color: #8681ff; /* Change on hover if desired */  
+}  
+.fs-7{
+    font-size: .7rem;
+}
+

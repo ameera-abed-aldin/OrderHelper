@@ -42,10 +42,8 @@ export default function Login() {
     <h5 className="mb-4">login</h5>
       <Form onSubmit={formik.handleSubmit}>
         <Form.Group className="mb-3" controlId="formBasicEmail">
-          <Form.Text className="text-muted">
-            {formik.touched.email && formik.errors.email}
-          </Form.Text>
-          <Form.Label>Email address</Form.Label>
+         
+         
           <Form.Control
             type="text"
             placeholder="Enter email"
@@ -55,12 +53,13 @@ export default function Login() {
             onBlur={formik.handleBlur}
           />
         </Form.Group>
+       
+            <p className="text-danger fs-7 text">{formik.touched.password && formik.errors.password}</p>
+        
 
         <Form.Group className="mb-3" controlId="formBasicPassword">
-          <Form.Text className="text-muted">
-            {formik.touched.password && formik.errors.password}
-          </Form.Text>
-          <Form.Label>Password</Form.Label>
+         
+        
           <Form.Control
             type="password"
             placeholder="Password"
@@ -70,12 +69,17 @@ export default function Login() {
             onBlur={formik.handleBlur}
           />
         </Form.Group>
+       
+        <p className="text-danger fs-7">
+            {formik.touched.password && formik.errors.password}
+          </p>
+        
       
-        <Button variant="primary" type="submit">
+        <Button variant="primary" type="submit" className="btn-purple w-100">
           Login
         </Button>
         <div>
-        <Form.Text className="text-muted">
+        <Form.Text className="text-muted fs-7">
            You Dont Have Account ? <Link to="/register" >Register</Link>
           </Form.Text>
         </div>
