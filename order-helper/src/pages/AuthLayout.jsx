@@ -1,11 +1,21 @@
 import { Outlet } from "react-router";
+import leftImg from "../assets/left.jpg"
 
 export function AuthLayout(){
     return(
-        <div className="layout">
-            <h1>hello everone</h1>
-            <div><Outlet/></div>
+        <main className="layout d-flex justify-content-center align-items-center">
+        <div className="Custum-container row border rounded-3 shadow">
+            <section className="col-md-6 left">
+            
+            </section>
+            
+            <section className="col-md-6 p-5">
+            <h2 className="mb-4">Order Help</h2>
+            
+            <Outlet/>
+            </section>
         </div>
+        </main>
     )
 
 }

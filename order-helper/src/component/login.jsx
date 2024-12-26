@@ -5,6 +5,7 @@ import axios from "axios";
 import { useState } from "react";
 import{useNavigate} from "react-router";
 import { useAuth } from "./AuthContext";
+import { Link } from "react-router";
 const SignupSchema = Yup.object().shape({
   password: Yup.string()
     .min(2, "Too Short!")
@@ -38,6 +39,7 @@ export default function Login() {
 
   return (
     <>
+    <h5 className="mb-4">login</h5>
       <Form onSubmit={formik.handleSubmit}>
         <Form.Group className="mb-3" controlId="formBasicEmail">
           <Form.Text className="text-muted">
@@ -70,8 +72,13 @@ export default function Login() {
         </Form.Group>
       
         <Button variant="primary" type="submit">
-          Submit
+          Login
         </Button>
+        <div>
+        <Form.Text className="text-muted">
+           You Dont Have Account ? <Link to="/register" >Register</Link>
+          </Form.Text>
+        </div>
       </Form>
     </>
   );
