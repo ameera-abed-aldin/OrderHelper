@@ -41,9 +41,7 @@ export default function Login() {
     <>
     <h5 className="mb-4">login</h5>
       <Form onSubmit={formik.handleSubmit}>
-        <Form.Group className="mb-3" controlId="formBasicEmail">
-         
-         
+        <Form.Group className="mb-3" controlId="formBasicEmail">  
           <Form.Control
             type="text"
             placeholder="Enter email"
@@ -55,11 +53,7 @@ export default function Login() {
         </Form.Group>
        
             <p className="text-danger fs-7 text">{formik.touched.password && formik.errors.password}</p>
-        
-
-        <Form.Group className="mb-3" controlId="formBasicPassword">
-         
-        
+        <Form.Group className="mb-3" controlId="formBasicPassword">            
           <Form.Control
             type="password"
             placeholder="Password"
@@ -68,13 +62,10 @@ export default function Login() {
             onChange={formik.handleChange}
             onBlur={formik.handleBlur}
           />
-        </Form.Group>
-       
+        </Form.Group>  
         <p className="text-danger fs-7">
             {formik.touched.password && formik.errors.password}
-          </p>
-        
-      
+        </p>
         <Button variant="primary" type="submit" className="btn-purple w-100">
           Login
         </Button>

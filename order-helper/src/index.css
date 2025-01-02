@@ -1,9 +1,21 @@
 
-@import url('https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&family=Montserrat:ital,wght@0,100..900;1,100..900&family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&display=swap');
+@import url('./Layout/Navbar/Navbar.module.css');
+
+:root{
+    --back-color:#c3c9d9;
+    --primary-color: #4f47ff;
+    --font-color:black;
+    --font-color-2:white;
+}
 
 *{
-    font-family: "Poppins", serif;
+    font-family: "Inter", serif;
+    box-sizing: border-box;   
 }
+
+
+
 .layout{
    min-height: 100vh;
    background-image: url("./assets/bg1.jpg");
@@ -48,4 +60,48 @@
 }
 .text-col{
     color:#381763;  
+}
+.blue-color{
+    color:var(--primary-color);
+}
+.fs-11{
+    font-size: 4.5rem;
+    letter-spacing: .5rem;
+    font-weight: 700;
+}
+.bg-blue{
+    background-color: var(--primary-color);
+}
+.hero{
+    min-height: 80vh;
+    background-image: url('./assets/home/1.png');
+    background-size: cover;
+    background-position: center;
+   
+}
+.fs-12{
+    font-size: 3rem;
+}
+.back-color{
+    color:var(--back-color);
+}
+
+.logo{
+    font-weight: 800;
+    font-size: 1.5rem;
+    color:var(--primary-color)
+}
+/* card*/
+.card-back{
+    background: rgb(255,255,255);
+background: linear-gradient(90deg, rgba(255,255,255,0.8959524117264093) 0%, rgba(249,255,255,0.9743837842754289) 35%);
+}
+.fs-10{
+    font-size: .7rem;
+}
+.height-card{
+   min-height: 160px;
+}
+.height-card-1{
+    min-height: 120px;
 }
