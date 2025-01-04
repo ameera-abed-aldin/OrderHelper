@@ -38,7 +38,7 @@ const itemCount=0;
          </div> 
          </Nav.Link> 
             <Nav.Link href="#" >       
-             <Link to="/login">Login</Link>
+             <Link to="/login" className="link">Login</Link>
             </Nav.Link>
             </div>
           </Nav>

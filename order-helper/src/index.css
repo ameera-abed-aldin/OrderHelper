@@ -8,6 +8,9 @@
     --font-color:black;
     --font-color-2:white;
 }
+body{
+    background-color: #e5ecff;
+}
 
 *{
     font-family: "Inter", serif;
@@ -96,12 +99,73 @@
     background: rgb(255,255,255);
 background: linear-gradient(90deg, rgba(255,255,255,0.8959524117264093) 0%, rgba(249,255,255,0.9743837842754289) 35%);
 }
+.link{
+    color:var(--primary-color);
+    text-decoration: none;
+}
 .fs-10{
-    font-size: .7rem;
+    font-size: .8rem;
 }
 .height-card{
    min-height: 160px;
 }
 .height-card-1{
     min-height: 120px;
+}
+.card-width{
+    width:15rem;
+min-height:350px;
+    position: relative;
+}
+.hover:hover{
+    transform: scale(1.03);
+    transition: transform .5s;
+}
+@media (max-width: 576px){
+    .small-screen{
+        justify-content: center;
+    }
+    .card-width{
+        width: 70%;
+        margin: 0 auto;
+ 
+        
+    }
+    .hover:hover{
+        transform: scale(1);
+        transition: transform.5s;
+    }
+}
+
+.card-hover:hover{
+    background-color: white;
+    color:var(--primary-color) !important;
+    cursor: pointer;
+}
+.font-price{
+    font-weight: 700;
+}
+.custom-heigth{
+   height: 420px;
+   margin-bottom: 1rem;
+}
+.collection-title{
+   max-width:35%;
+    background-color: var(--primary-color);
+    color:white;
+    padding: 1.7rem;
+    border-bottom-right-radius: .7rem;
+    
+}
+.img-banner{
+    background-image: url('./assets/banner.jpg');
+    background-size: cover;
+    
+}
+.hover-list li:hover{
+    color: var(--primary-color);
+    transform: scale(1.02);
+    font-weight: 700;
+    transition: color 0.3s ease;
+    cursor: pointer;
 }

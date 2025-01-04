@@ -5,6 +5,7 @@ import { AdminDashBoard } from "./pages/AdminDashBoard"
 import { AuthLayout } from "./pages/AuthLayout"
 import { Routes, Route } from "react-router"
 import Home from "./pages/Home"
+import BestSellerPage from "./pages/BestSellerPage"
 
 
 
@@ -16,6 +17,7 @@ function App() {
     <>
     <Routes>
     <Route path="/" element={<Home/>} />
+    <Route path="/BestSellerPage" element={<BestSellerPage/>} />
     <Route path="/H" element={<Home/>} />
       <Route element={<AuthLayout/>}>
        <Route path="/login" element={<Login/>} />
