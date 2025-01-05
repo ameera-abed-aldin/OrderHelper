@@ -1,6 +1,7 @@
 import React, { useEffect, useState } from 'react';  
 import axios from 'axios';  
 import ProductCard from './ProductCard';
+import {Row,Col} from 'react-bootstrap';
 export default function RelatedProduct({category}){
     const [relatedProducts, setRelatedProducts] = useState([]);  
     const [loading, setLoading] = useState(true);  
@@ -33,16 +34,19 @@ export default function RelatedProduct({category}){
 if(!loading){
     return ( 
 
-        <div>  
+        <>  
             <h2 className='mb-4'>Related Products </h2>  
-            <div className='d-flex flex-wrap justify-content-between'>  
-                {relatedProducts.map((product,index) => (  
-                <div className='mb-3' key={index}>
-                    <ProductCard product={product}  />
-                    </div>
-                ))}  
-            </div>  
+            <div className="product-list"> 
+        <Row>  
+            {relatedProducts.map((product,index) => (  
+                 <Col key={index} xs={12} sm={6} md={4} lg={3} className="mb-4 small-screen">
+                       <ProductCard product={product}  />                 
+                 </Col>
+            ))} 
+            </Row> 
+           
         </div>  
+        </>
     );  
 
 }}

@@ -35,8 +35,8 @@ const ProductDetails = () => {
   return (
     <>
       <Container fluid className="">
-        <section className="d-flex p-4 w-100 flex-wrap">
-          <div className="right d-flex flex-column">
+        <section className="section-product d-md-flex p-4 w-100 flex-wrap">
+          <div className="right d-md-flex flex-column">
             <h2 className="font-weight-bold">{product.title} 2025</h2>
             <div className="thumbnail-images d-flex">
               {images.map((img, index) => (
@@ -84,10 +84,10 @@ const ProductDetails = () => {
                   </Form>
                 </div>
               </dv>
-              <div className="desc-left  blue-color fs-2 d-flex align-items-start justify-content-end">{product.price}$</div>
+              <div className="desc-left  blue-color fs-2 d-md-flex align-items-start justify-content-end">{product.price}$</div>
             </div>
             
-      <Accordion defaultActiveKey="0" style={{ marginTop: '20px' }}>  
+      <Accordion defaultActiveKey="0" >  
         <Accordion.Item eventKey="0" className="item-accord">  
           <Accordion.Header>Description</Accordion.Header>  
           <Accordion.Body className="text-secondary fs-10">  
