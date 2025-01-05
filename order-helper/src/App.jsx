@@ -6,6 +6,9 @@ import { AuthLayout } from "./pages/AuthLayout"
 import { Routes, Route } from "react-router"
 import Home from "./pages/Home"
 import BestSellerPage from "./pages/BestSellerPage"
+import ProductDetails from "./pages/ProductDetails"
+import Layout from "./pages/Layout"
+
 
 
 
@@ -16,9 +19,16 @@ function App() {
   return (
     <>
     <Routes>
-    <Route path="/" element={<Home/>} />
+      <Route path='/' element={<Layout/>}>
+      <Route path="/" element={<Home/>} />
+      <Route path="/products/:id" element={<ProductDetails/>} /> 
+
+      </Route>
+    
+    
     <Route path="/BestSellerPage" element={<BestSellerPage/>} />
-    <Route path="/H" element={<Home/>} />
+   
+ 
       <Route element={<AuthLayout/>}>
        <Route path="/login" element={<Login/>} />
        <Route path="/register" element={<Rigister/>} />

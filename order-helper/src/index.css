@@ -69,17 +69,18 @@ body{
 }
 .fs-11{
     font-size: 4.5rem;
-    letter-spacing: .5rem;
+    letter-spacing: 1rem;
     font-weight: 700;
 }
 .bg-blue{
     background-color: var(--primary-color);
 }
 .hero{
-    min-height: 80vh;
-    background-image: url('./assets/home/1.png');
+    min-height: 100vh;
+    background-image: url('./assets/hero3.jpeg');
     background-size: cover;
-    background-position: center;
+    background-position:center ;
+    padding:3rem;
    
 }
 .fs-12{
@@ -114,7 +115,7 @@ background: linear-gradient(90deg, rgba(255,255,255,0.8959524117264093) 0%, rgba
 }
 .card-width{
     width:15rem;
-min-height:350px;
+min-height:340px;
     position: relative;
 }
 .hover:hover{
@@ -162,6 +163,9 @@ min-height:350px;
     background-size: cover;
     
 }
+.fs-8{
+    font-size: .9rem;
+}
 .hover-list li:hover{
     color: var(--primary-color);
     transform: scale(1.02);
@@ -169,3 +173,58 @@ min-height:350px;
     transition: color 0.3s ease;
     cursor: pointer;
 }
+.thumbnail-images{
+   max-width:35%;
+   gap:.8rem;
+   align-items: end;
+
+  
+}
+.thumbnail-images img:nth-child(2){
+    height: 70%;
+}
+.thumbnail-images img:hover{
+transform: scale(1.07);
+transition: all 0.3s ease-in-out;
+}
+
+.right{
+ max-width:30%;
+    
+    gap:5rem;
+}
+.mid{
+  max-width: 30%;
+    
+   
+}
+.desc{
+   max-width: 40%;
+    
+    padding: 1rem;
+   
+    flex: 1 0 auto; 
+ 
+}
+.desc-right  p{
+    font-weight: 500;
+    color:#878da1;
+    font-size: .8rem;
+}
+.desc-right  p span{
+    font-weight: 300;
+    color:black;
+}
+.desc-flex{
+    gap:1rem;
+
+}
+.desc-left{
+font-weight: 900;
+letter-spacing: .2rem;
+width:50%;
+justify-content: flex-start;
+}
+ .item-accord{
+    border: 1px solid var(--primary-color);
+ }

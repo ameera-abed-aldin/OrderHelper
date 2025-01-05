@@ -12,7 +12,7 @@ const itemCount=0;
     return(<>
      <Navbar expand="lg">
       <Container>
-        <Navbar.Brand href="#" className='logo'>El</Navbar.Brand>
+        <Navbar.Brand href="#" className='logo'>EA</Navbar.Brand>
         <Navbar.Toggle aria-controls="navbarScroll" />
         <Navbar.Collapse id="navbarScroll">
           <Nav

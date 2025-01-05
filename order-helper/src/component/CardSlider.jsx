@@ -32,7 +32,7 @@ const CardSlider = () => {
                     <Col md={3} key={index} className="mb-4">  
                         <Card className="text-center card-back">  
                             <Card.Body className='height-card'>  
-                                <div className="logo">El</div>  
+                                <div className="logo">EA</div>  
                                 <Card.Title className="fs-10">{card.title}</Card.Title>  
                                 <Card.Text className='fs-10'>{card.text}</Card.Text>  
                             </Card.Body>  

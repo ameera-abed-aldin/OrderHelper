@@ -2,8 +2,10 @@ import Button from 'react-bootstrap/Button';
 import Card from 'react-bootstrap/Card';
 import { AiOutlineHeart, AiFillHeart } from 'react-icons/ai';  
 import React from 'react';
+import {Link} from 'react-router';
 export default function ProductCard({product}){
   const [isFavorited, setIsFavorited] = React.useState(false);  
+ 
 
   const handleFavoriteClick = () => {  
     setIsFavorited((prev) => !prev);  
@@ -20,14 +22,16 @@ export default function ProductCard({product}){
         </Button>  
       <Card.Img variant="top"  style={{ width: '100%', height: '170px', objectFit: 'cover' }} src={product.thumbnail}/>
       <Card.Body>
-        <Card.Title className='fs-6'>{product.title}</Card.Title>
-        
-        <Card.Text className='font-price'>
+        <Card.Title className='fs-6'>
+          <Link  to={`/products/${product.id}`} className='link text-dark'>{product.title}</Link>
+          </Card.Title>
+        <div className='d-flex justify-content-between' style={{alignItems: "baseline"}}>
+        <p className='font-price'>
         {product.price}$
-        </Card.Text>
-             
+        </p>
+        <div className='bg-blue text-center text-white p-2 fs-10 card-hover rounded'> +Add To Cart</div>
+        </div>   
       </Card.Body>
-      <div className='bg-blue text-center text-white p-1 fs-10 card-hover'>Add To Cart</div>
     </Card>
     )
 }

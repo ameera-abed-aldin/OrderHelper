@@ -8,13 +8,13 @@ export default function FooterSection(){
       <Container>  
         <Row className="mb-4 fs-10">  
           <Col md={6} lg={4}>  
-            <h1 className="logo">El</h1>  
+            <h1 className="logo">EA</h1>  
             <p>Stay in Touch!
             Join our mailing list to receive the latest updates on new arrivals, special promotions, and exclusive offers designed just for you.</p>  
           
           </Col>  
           <Col md={2} >  
-            <h5>/ MENU</h5>  
+            <h6 >/ MENU</h6>  
             <ul className='hover-list'>  
               <li>Home</li>  
               <li>About us</li>  
@@ -25,7 +25,7 @@ export default function FooterSection(){
             </ul>  
           </Col>  
           <Col md={2}>  
-            <h5>/ CUSTOMERS</h5>  
+            <h6>/ CUSTOMERS</h6>  
             <ul className='hover-list'>  
               <li>Delivery and payment</li>  
               <li>Guarantees reviews</li>  
@@ -35,7 +35,7 @@ export default function FooterSection(){
             </ul>  
           </Col>  
           <Col md={2}>  
-            <h5>/ CONTACT</h5>  
+            <h6>/ CONTACT</h6>  
             <p>+44 7087 390927</p>  
             <p>Eleena@gmail.com</p>  
             <p>Rammallah ,Palestain</p>  
@@ -43,7 +43,7 @@ export default function FooterSection(){
        
          
           <Col>  
-            <h5>/ OUR SOCIAL</h5>  
+            <h6>/ OUR SOCIAL</h6>  
             <ul className='hover-list'>  
               <li>Instagram</li>  
               <li>Facebook</li>  
